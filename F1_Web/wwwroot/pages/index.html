@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icone FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <main class="container-fluid mb-5">
+        <!-- Sezione Carousel -->
+        <section id="carousel-section" class="py-5">
+            <div id="carouselFormula1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselFormula1" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Ferrari SF24"></button>
+                    <button type="button" data-bs-target="#carouselFormula1" data-bs-slide-to="1"
+                        aria-label="McLaren MP4-23"></button>
+                    <button type="button" data-bs-target="#carouselFormula1" data-bs-slide-to="2"
+                        aria-label="Williams FW16B"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/assets/ferrari-sf24.jpg" class="d-block w-100 my-carousel-img" alt="Ferrari SF24">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Ferrari SF24</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/mcLaren-mp4-23.jpg" class="d-block w-100 my-carousel-img"
+                            alt="McLaren MP4-23">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>McLaren MP4-23</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/williams-fw16b.jpg" class="d-block w-100 my-carousel-img"
+                            alt="Williams FW16B">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Williams FW16B</h5>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFormula1"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselFormula1"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Sezione Prossimi Eventi -->
+        <section class="full-width eventi-section">
+            <h2 class="text-light mb-4">I PROSSIMI EVENTI</h2>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="event-card col-md-3" data-event="australia"
+                        onclick="window.open('https://www.grandprix.com.au/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio d'Australia</h5>
+                            <p>Un'emozionante apertura della stagione 2025 sul tracciato di Melbourne, che unisce
+                                velocità e sfide uniche.</p>
+                            <span class="badge-event">14 - 16 Marzo 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="cina"
+                        onclick="window.open('https://www.formula1.com/en/racing/2025/China.html', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio della Cina</h5>
+                            <p>Il ritorno dopo una lunga pausa di uno dei circuiti più tecnici, dove ogni curva può
+                                cambiare il destino della gara.</p>
+                            <span class="badge-event">21 - 23 Marzo 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="giappone"
+                        onclick="window.open('https://www.suzukacircuit.jp/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio del Giappone</h5>
+                            <p>Il leggendario circuito di Suzuka, un mix perfetto di tecnica e adrenalina, dove ogni
+                                pilota sogna di vincere.</p>
+                            <span class="badge-event">4 - 6 Aprile 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="bahrain"
+                        onclick="window.open('https://www.bahraingp.com/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio del Bahrain</h5>
+                            <p>Un'emozionante gara sotto le stelle, con il calore del deserto che rende ogni sorpasso
+                                ancora più spettacolare.</p>
+                            <span class="badge-event">11 - 13 Aprile 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="arabia-saudita"
+                        onclick="window.open('https://www.saudiarabiangp.com/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio dell'Arabia Saudita</h5>
+                            <p>Un'affascinante gara notturna sul circuito di Jeddah, dove velocità e sfida si fondono in
+                                un'ambientazione unica.</p>
+                            <span class="badge-event">18 - 20 Aprile 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="miami"
+                        onclick="window.open('https://www.f1miamigp.com/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio di Miami</h5>
+                            <p>Una gara cittadina dove lusso, velocità e atmosfera unica creano un'esperienza senza pari
+                                per piloti e tifosi.</p>
+                            <span class="badge-event">2 - 4 Maggio 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="emilia-romagna"
+                        onclick="window.open('https://www.autodromoimola.it/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio dell'Emilia Romagna</h5>
+                            <p>Imola, un circuito intriso di storia e passione, dove ogni curva racconta la tradizione
+                                della Formula 1.</p>
+                            <span class="badge-event">16 - 18 Maggio 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="monaco"
+                        onclick="window.open('https://monaco-grandprix.com/it/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio di Monaco</h5>
+                            <p>Il Gran Premio più iconico, dove le strade di Montecarlo mettono alla prova il coraggio e
+                                la precisione dei piloti.</p>
+                            <span class="badge-event">23 - 25 Maggio 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="spagna"
+                        onclick="window.open('https://www.circuitcat.com/en', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio di Spagna</h5>
+                            <p>Il circuito di Barcellona-Catalunya è un banco di prova ideale per le prestazioni delle
+                                monoposto, un mix di curve veloci e tecniche.</p>
+                            <span class="badge-event">30 Maggio - 1 Giugno 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="canada"
+                        onclick="window.open('https://www.circuitgillesvilleneuve.ca/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio del Canada</h5>
+                            <p>Montréal è il palcoscenico di una gara emozionante, con il circuito Gilles Villeneuve che
+                                offre continui colpi di scena e adrenalina pura.</p>
+                            <span class="badge-event">13 - 15 Giugno 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="austria"
+                        onclick="window.open('https://www.projekt-spielberg.com/en', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio d'Austria</h5>
+                            <p>Il Red Bull Ring è sinonimo di gare veloci e spettacolari, con curve ad alta velocità che
+                                richiedono perfezione assoluta.</p>
+                            <span class="badge-event">27 - 29 Giugno 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="gran-bretagna"
+                        onclick="window.open('https://www.silverstone.co.uk/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio di Gran Bretagna</h5>
+                            <p>Silverstone, la culla della Formula 1, dove ogni curva racconta la storia del motorsport
+                                e la passione per la velocità.</p>
+                            <span class="badge-event">4 - 6 Luglio 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="belgio"
+                        onclick="window.open('https://www.spa-francorchamps.be/en', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio del Belgio</h5>
+                            <p>SPA-Francorchamps è un circuito leggendario, noto per le sue curve veloci, il suo fascino
+                                naturale e il rischio che ogni pilota affronta.</p>
+                            <span class="badge-event">25 - 27 Luglio 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="ungheria"
+                        onclick="window.open('https://www.hungaroring.hu/en', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio d'Ungheria</h5>
+                            <p>Il circuito dell'Hungaroring è una vera sfida tecnica, con curve strette che mettono alla
+                                prova la capacità di sorpasso e il controllo della monoposto.</p>
+                            <span class="badge-event">1 - 3 Agosto 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="olanda"
+                        onclick="window.open('https://dutchgp.com/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio d'Olanda</h5>
+                            <p>Il circuito di Zandvoort regala un'esperienza spettacolare, con il suo layout che si
+                                snoda tra dune di sabbia e curve che sfidano ogni pilota.</p>
+                            <span class="badge-event">29 - 31 Agosto 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="italia"
+                        onclick="window.open('https://www.monzanet.it/gran-premio-d-italia/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio d'Italia</h5>
+                            <p>Monza è la terra delle leggende, dove ogni curva è legata a momenti storici e dove la
+                                Ferrari trova la sua casa e il suo cuore pulsante.</p>
+                            <span class="badge-event">5 - 7 Settembre 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="azerbaijan"
+                        onclick="window.open('https://www.bakucitycircuit.com/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio dell'Azerbaijan</h5>
+                            <p>Baku è un circuito cittadino che sa come sorprendere, con sorpassi spettacolari e
+                                un'atmosfera unica che rende ogni gara emozionante.</p>
+                            <span class="badge-event">19 - 21 Settembre 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="singapore"
+                        onclick="window.open('https://www.singaporegp.sg/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio di Singapore</h5>
+                            <p>Singapore, un'imperdibile gara notturna dove la città di Marina Bay offre uno scenario
+                                unico di luci e velocità.</p>
+                            <span class="badge-event">3 - 5 Ottobre 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="usa"
+                        onclick="window.open('https://www.circuitoftheamericas.com/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio degli Stati Uniti</h5>
+                            <p>Austin è il palco per una gara che mescola tecnica, emozioni e un pubblico entusiasta che
+                                supporta la Formula 1 con passione.</p>
+                            <span class="badge-event">17 - 19 Ottobre 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="messico"
+                        onclick="window.open('https://www.mexicogp.mx/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio del Messico</h5>
+                            <p>Il circuito Hermanos Rodríguez è un viaggio spettacolare tra adrenalina, curve storiche e
+                                la vibrante passione dei tifosi messicani.</p>
+                            <span class="badge-event">24 - 26 Ottobre 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="brasile"
+                        onclick="window.open('https://f1saopaulo.com.br/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio del Brasile</h5>
+                            <p>Interlagos è sinonimo di passione pura, dove ogni curva racconta la storia di duelli
+                                epici e della grandezza della Formula 1.</p>
+                            <span class="badge-event">7 - 9 Novembre 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="las-vegas"
+                        onclick="window.open('https://www.lasvegas.gp/it', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio di Las Vegas</h5>
+                            <p>Le luci di Las Vegas creano un'atmosfera unica, con il circuito cittadino che regala
+                                emozioni forti e un'esperienza sensoriale senza pari.</p>
+                            <span class="badge-event">20 - 22 Novembre 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="qatar"
+                        onclick="window.open('https://www.lcsc.qa/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio del Qatar</h5>
+                            <p>Una gara spettacolare in notturna, con il caldo deserto che rende ogni sorpasso ancora
+                                più emozionante e imprevedibile.</p>
+                            <span class="badge-event">28 - 30 Novembre 2025</span>
+                        </div>
+                    </div>
+                    <div class="event-card col-md-3" data-event="abudhabi"
+                        onclick="window.open('https://www.yasmarinacircuit.com/', '_blank')">
+                        <div class="event-overlay"></div>
+                        <div class="event-info">
+                            <h5>Gran Premio di Abu Dhabi</h5>
+                            <p>Il gran finale della stagione, con il circuito di Yas Marina che regala spettacolo e
+                                emozioni fino all'ultimo giro.</p>
+                            <span class="badge-event">5 - 7 Dicembre 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sezione Statistiche Piloti -->
+        <section id="statistiche-piloti" class="statistiche-section">
+            <h2 class="mb-4">LA GRIGLIA DEL 2025</h2>
+            <div class="container text-center">
+                <div class="row">
+                    <!-- Card per Max Verstappen -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/verstappen.jpg" alt="Max Verstappen">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Max Verstappen</h5>
+                                <p>Campione del mondo in carica con Red Bull Racing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Liam Lawson -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/lawson.jpg" alt="Liam Lawson">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Liam Lawson</h5>
+                                <p>Nuovo pilota di Red Bull Racing per la stagione 2025.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Lewis Hamilton -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/hamilton.jpg" alt="Lewis Hamilton">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Lewis Hamilton</h5>
+                                <p>Sette volte campione del mondo, ora con Ferrari.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Charles Leclerc -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/leclerc.jpg" alt="Charles Leclerc">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Charles Leclerc</h5>
+                                <p>Stella nascente della Ferrari, pronto a lottare per il titolo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per George Russell -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/russell.jpg" alt="George Russell">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>George Russell</h5>
+                                <p>Giovane talento britannico, al fianco di Hamilton in Mercedes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Andrea Kimi Antonelli -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/antonelli.jpg" alt="Andrea Kimi Antonelli">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Andrea Kimi Antonelli</h5>
+                                <p>Esordiente in Mercedes, pronto a seguire i consigli di Hamilton.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Lando Norris -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/norris.jpg" alt="Lando Norris">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Lando Norris</h5>
+                                <p>Giovane promessa britannica, al volante della McLaren.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Oscar Piastri -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/piastri.jpg" alt="Oscar Piastri">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Oscar Piastri</h5>
+                                <p>Talento australiano, pronto a brillare con la McLaren.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Lance Stroll -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/stroll.jpg" alt="Lance Stroll">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Lance Stroll</h5>
+                                <p>Figlio d'arte, al volante dell'Aston Martin.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Fernando Alonso -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/alonso.jpg" alt="Fernando Alonso">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Fernando Alonso</h5>
+                                <p>Due volte campione del mondo, ancora competitivo con Aston Martin.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Pierre Gasly -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/gasly.jpg" alt="Pierre Gasly">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Pierre Gasly</h5>
+                                <p>In forza all'Alpine, alla ricerca di un posto di prestigio nella F1.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Jack Doohan -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/doohan.jpg" alt="Jack Doohan">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Jack Doohan</h5>
+                                <p>Giovane talento che entra nel mondo della Formula 1 con Alpine.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Yuki Tsunoda -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/tsunoda.jpg" alt="Yuki Tsunoda">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Yuki Tsunoda</h5>
+                                <p>Il pilota giapponese pronto a confermare il suo valore con AlphaTauri.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Isack Hadjar -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/hadjar.jpg" alt="Isack Hadjar">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Isack Hadjar</h5>
+                                <p>Giovane promessa del motorsport, alla sua prima stagione in Formula 1 con AlphaTauri.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Esteban Ocon -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/ocon.jpg" alt="Esteban Ocon">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Esteban Ocon</h5>
+                                <p>Un altro pilota di talento per Alpine, determinato a conquistare vittorie.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Oliver Bearman -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/bearman.jpg" alt="Oliver Bearman">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Oliver Bearman</h5>
+                                <p>Giovane inglese, pronto a mostrare il suo talento nella Formula 1 con Haas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Alexander Albon -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/albon.jpg" alt="Alexander Albon">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Alexander Albon</h5>
+                                <p>Il pilota thailandese alla guida di Williams, determinato a crescere.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Carlos Sainz -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/sainz.jpg" alt="Carlos Sainz">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Carlos Sainz</h5>
+                                <p>Spagnolo in crescita, un futuro importante in Williams.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Nico Hülkenberg -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/hulkenberg.jpg" alt="Nico Hülkenberg">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Nico Hülkenberg</h5>
+                                <p>Esperto pilota tedesco con Haas, pronto per nuove sfide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card per Gabriel Bortoleto -->
+                    <div class="col-md-4">
+                        <div class="pilot-card">
+                            <div class="pilot-img">
+                                <img src="/assets/bortoleto.jpg" alt="Gabriel Bortoleto">
+                            </div>
+                            <div class="pilot-info">
+                                <h5>Gabriel Bortoleto</h5>
+                                <p>Debuttante di talento, pronto a mostrare il suo valore con Alfa Romeo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Storia della F1 -->
+        <section id="storia" class="storia-section">
+            <div class="container text-center">
+                <h2 class="mb-4">La Leggenda della Formula 1</h2>
+                <p class="lead mb-4">Dagli albori nel 1950 fino alle moderne monoposto tecnologiche, la Formula 1 ha
+                    ridefinito la velocità, l'innovazione e la competizione. Scopri le grandi epoche, le vetture
+                    rivoluzionarie e i piloti che hanno scritto la storia di questo sport.</p>
+                <a href="/cos'è/index.html" class="btn-storia">Esplora la Storia</a>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container text-center">
+                <h2 class="mb-4">Vivi l'Emozione della Formula 1!</h2>
+                <p class="lead mb-4">Non perdere neanche un sorpasso! Segui le ultime notizie, scopri i dettagli sulle
+                    squadre, analizza le strategie di gara e preparati per il prossimo Gran Premio.</p>
+                <a href="https://www.formula1.com/" class="btn-cta" target="_blank">Accedi al Sito Ufficiale</a>
+            </div>
+        </section>
+
+    </main>
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="/js/template-loader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            // Carica i template
+            await TemplateLoader.initializeTemplates();
+        });
+    </script>
+</body>
+
+</html>

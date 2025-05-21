@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding-top: 80px;
+            overflow-x: hidden;
+        }
+
+        /* Sezione Intro */
+        .intro-f1 {
+            background: linear-gradient(135deg, #ff4e00, #e1e000);
+            color: white;
+            padding: 120px 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .intro-f1 h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .intro-f1 p {
+            font-size: 1.3rem;
+        }
+
+        /* Storia */
+        .storia-f1 {
+            background-color: #fff;
+            color: #333;
+            padding: 80px 0;
+        }
+
+        .storia-f1 .timeline-event {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .storia-f1 .timeline-event:hover {
+            transform: scale(1.05);
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .timeline-description {
+            font-size: 1rem;
+        }
+
+        /* Sezione Auto F1 */
+        .auto-f1 {
+            background-color: #fff;
+            padding: 60px 0;
+        }
+
+        .auto-f1 img {
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sezione Regole */
+        .regole-f1 {
+            background: linear-gradient(45deg, #333, #444);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .regole-f1 ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .regole-f1 li {
+            background-color: #666;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .regole-f1 li:hover {
+            background-color: #ff4e00;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Tecnologia */
+        .tecnologia {
+            background: linear-gradient(45deg, #2b8e8d, #2c6d64);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .tecnologia h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .tecnologia p {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .tecnologia .container {
+            background-color: rgba(0, 0, 0, 0.6); /* Sfondo scuro semitrasparente */
+            border-radius: 15px;
+            padding: 40px;
+        }
+
+        /* Miglioramento dell'immagine */
+        .tecnologia img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Futuro */
+        .futuro-f1 {
+            background-color: #fff;
+            color: #333;
+            padding: 80px 0;
+        }
+
+        .btn-primary {
+            background-color: #ff4e00;
+            border-color: #ff4e00;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #e1e000;
+            border-color: #e1e000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <!-- Sezione Introduzione -->
+        <section class="intro-f1 text-center py-5">
+            <div class="container">
+                <h1 class="display-4 mb-4 text-shadow">Cos'è la Formula 1?</h1>
+                <p class="lead mb-5">La Formula 1 è l'apice delle competizioni automobilistiche, dove i migliori
+                    piloti e team si sfidano in una serie di gare spettacolari. Scopri il mondo della velocità, 
+                    dell'innovazione e della passione! Nata nel 1950, la F1 è evoluta in una delle competizioni più 
+                    prestigiose e seguite al mondo, con decine di milioni di appassionati e fan in ogni angolo
+                    del globo.</p>
+            </div>
+        </section>
+
+        <!-- Sezione Storia -->
+        <section id="storia" class="storia-f1 py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">La Storia della Formula 1</h2>
+                <p>La Formula 1, nata nel 1950, ha conquistato il cuore degli appassionati di motorsport con gare
+                    emozionanti in tutto il mondo. Ogni anno, i team si sfidano per il titolo mondiale in una serie di
+                    eventi che rappresentano il massimo livello di tecnologia automobilistica.</p>
+                    <p class="mb-4">Dalla creazione delle prime vetture fino agli attuali bolidi ibridi, 
+                        la storia della Formula 1 è un viaggio attraverso innovazioni tecniche, 
+                        gare indimenticabili e leggende senza tempo. Le auto di F1 sono state pionieri 
+                        nell'introduzione di tecnologie come il turbo, il KERS (Kinetic Energy Recovery System), 
+                        e le sospensioni attive, che hanno rivoluzionato anche il settore automobilistico 
+                        commerciale.</p>
+                <div class="storia-timeline">
+                    <div class="timeline-event">
+                        <h3 class="timeline-title">1950: La Nascita</h3>
+                        <p class="timeline-description">La prima stagione di Formula 1 si svolge con il primo Campionato
+                            del Mondo.</p>
+                    </div>
+                    <div class="timeline-event">
+                        <h3 class="timeline-title">1980: L'Età Dorata</h3>
+                        <p class="timeline-description">Gli anni '80 vedono l'ascesa di leggende come Ayrton Senna e
+                            Alain Prost.</p>
+                    </div>
+                    <div class="timeline-event">
+                        <h3 class="timeline-title">2000: Dominio Schumacher</h3>
+                        <p class="timeline-description">Michael Schumacher stabilisce un'epoca d'oro per la Ferrari e il
+                            motorsport.</p>
+                    </div>
+                    <div class="timeline-event">
+                        <h3 class="timeline-title">2014: L'introduzione dei motori ibridi</h3>
+                        <p class="timeline-description">La Formula 1 si evolve con l'introduzione dei motori ibridi, un passo verso l'efficienza energetica e la sostenibilità.</p>
+                    </div>
+                    <div class="timeline-event">
+                        <h3 class="timeline-title">2020: Cambiamenti nei regolamenti per la sostenibilità</h3>
+                        <p class="timeline-description">I cambiamenti nei regolamenti mirano a ridurre le emissioni di CO2 e ad aumentare la sostenibilità ambientale.</p>
+                    </div>                    
+                    <div class="timeline-event">
+                        <h3 class="timeline-title">2010-2020: L'era di Hamilton</h3>
+                        <p class="timeline-description">Lewis Hamilton emerge come uno dei piloti più dominanti nella
+                            storia della F1.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Regole -->
+        <section class="regole-f1 py-5 bg-dark text-white">
+            <div class="container">
+                <h2 class="text-center mb-4">Le Regole Fondamentali</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Punti:</strong> I piloti guadagnano punti in base al piazzamento in gara. Il vincitore riceve 25 punti, il secondo 18, e così via.</li>
+                            <li class="list-group-item"><strong>Qualifiche:</strong> Determinano la posizione di partenza di ciascun pilota. La sessione di qualificazione è divisa in tre fasi: Q1, Q2 e Q3.</li>
+                            <li class="list-group-item"><strong>Gara:</strong> Una gara di F1 si svolge su un circuito e può durare fino a 2 ore. La lunghezza della gara dipende dal circuito, ma generalmente è di circa 305 km.</li>
+                            <li class="list-group-item"><strong>Penalità:</strong> I piloti possono ricevere penalità in base a comportamenti scorretti, come il superamento dei limiti di velocità durante le qualifiche o il comportamento pericoloso in pista.</li>
+                            <li class="list-group-item"><strong>Sicurezza:</strong> Ogni vettura di Formula 1 è equipaggiata con tecnologie avanzate per la sicurezza, come il sistema Halo per proteggere la testa del pilota.</li>
+                        </ul>                        
+                    </div>
+                    <div class="col-md-6">
+                        <img src="/assets/logo-fia.png" class="img-fluid rounded shadow-lg" alt="Formula 1 Gara">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Auto F1 -->
+        <section class="auto-f1 py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Le Auto della Formula 1</h2>
+                <p>Le auto di F1 sono capolavori di ingegneria, progettate per raggiungere velocità mozzafiato, 
+                    resistere alle forze centrifughe e sfruttare ogni singolo cavallo di potenza. 
+                    I motori delle auto F1 sono ibridi, combinando motori a combustione interna e unità di recupero
+                    dell'energia (ERS), che sfruttano l'energia cinetica per aumentare l'efficienza e la potenza complessiva del motore.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/assets/mercedes.jpg" alt="Auto F1" class="img-fluid rounded shadow-lg">
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div>
+                            <p>Ogni vettura di F1 è una combinazione di aerodinamica avanzata, motori ibridi,
+                                sospensioni sofisticate e design innovativo. La velocità è solo una parte della sfida:
+                                ogni componente è studiato per ottimizzare le performance durante le gare.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Innovazione Tecnologica -->
+        <section class="tecnologia py-5 bg-gradient">
+            <div class="container">
+                <h2 class="text-center mb-4 text-white">Innovazione Tecnologica nella Formula 1</h2>
+                <p class="text-center mb-5 text-white">La Formula 1 è sinonimo di ricerca e sviluppo, con tecnologie che
+                    spesso anticipano quelle che vedremo sulle strade. Ogni team investe miliardi per ottenere il
+                    miglior motore, la migliore aerodinamica e soluzioni innovative.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/assets/aerodinamica.png" alt="Tecnologia F1" class="img-fluid rounded shadow-lg">
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div>
+                            <p>La Formula 1 ha introdotto alcune delle tecnologie automobilistiche più avanzate: 
+                                motori ibridi, sistemi di recupero dell'energia (KERS), sospensioni attive e freni
+                                a disco in carbonio. Alcune di queste tecnologie sono diventate standard sulle auto
+                                di serie, come i sistemi di recupero dell'energia e i motori ibridi, che oggi troviamo nelle auto elettriche di alta gamma.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Futuro della F1 -->
+        <section class="futuro-f1 py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Il Futuro della Formula 1</h2>
+                <p>Il futuro della Formula 1 è in continua evoluzione. Con l'introduzione di nuove normative
+                    e una crescente attenzione verso la sostenibilità, la F1 sta cambiando per rimanere un'icona
+                    mondiale di emozioni e innovazione. In futuro, la F1 mira a diventare sempre più sostenibile,
+                    con l'introduzione di carburanti sintetici e, probabilmente, motori completamente elettrici. Inoltre, si prevede un maggiore utilizzo della tecnologia digitale, come l'intelligenza artificiale per migliorare la strategia durante le gare.</p>
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div>
+                            <p>La F1 si sta evolvendo per abbracciare la sostenibilità. Le auto diventeranno ancora più
+                                efficienti, il formato delle gare potrebbe cambiare, e nuovi circuiti ecologici verranno
+                                introdotti per garantire che la Formula 1 continui ad essere un simbolo di velocità e
+                                innovazione, senza compromettere l'ambiente.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="/assets/kers2026.jpg" alt="Futuro della Formula 1"
+                            class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="/js/template-loader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            // Carica i template
+            await TemplateLoader.initializeTemplates();
+        });
+    </script>
+</body>
+
+</html>

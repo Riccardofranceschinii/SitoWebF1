@@ -1,0 +1,488 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f4f4f9 0%, #e0e5ec 100%);
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #eaeaea;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #e10600 0%, #000000 100%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px 0;
+    height: 80px;
+}
+
+.navbar-brand {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white !important;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand i {
+    margin-right: 10px;
+    font-size: 2rem;
+}
+
+.navbar-brand:hover {
+    color: #000000 !important;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin: 0 10px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f5a61d !important;
+    transform: translateY(-2px);
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#carouselFormula1 {
+    margin-top: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.my-carousel-img {
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(0.9);
+    transition: transform 0.5s ease-in-out;
+}
+
+.my-carousel-img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-caption h5 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption p {
+    font-size: 22px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(245, 166, 29, 0.8);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Sezione Prossimi Eventi */
+.eventi-section {
+    background: linear-gradient(90deg, #e10600, #000000);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Contenitore delle card */
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Stile generale delle card */
+.event-card {
+    position: relative;
+    width: 32%;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* Effetto di hover */
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Overlay sulle immagini per migliorare la leggibilità */
+.event-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease;
+}
+
+.event-card:hover .event-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Contenuto testuale */
+.event-info {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.event-info h5 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.event-info p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Badge con la data */
+.badge-event {
+    display: inline-block;
+    background-color: #f5a61d;
+    color: black;
+    padding: 8px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+.event-card:hover .badge-event {
+    background-color: #ffcc00;
+}
+
+/* Immagini di sfondo per le card */
+.event-card[data-event="australia"] {
+    background-image: url('/assets/australia.jpg');
+}
+
+.event-card[data-event="cina"] {
+    background-image: url('/assets/cina.jpg');
+}
+
+.event-card[data-event="giappone"] {
+    background-image: url('/assets/giappone.jpg');
+}
+
+.event-card[data-event="bahrain"] {
+    background-image: url('/assets/bahrain.jpg');
+}
+
+.event-card[data-event="arabia-saudita"] {
+    background-image: url('/assets/arabia-saudita.jpg');
+}
+
+.event-card[data-event="miami"] {
+    background-image: url('/assets/miami.jpg');
+}
+
+.event-card[data-event="emilia-romagna"] {
+    background-image: url('/assets/emilia-romagna.jpg');
+}
+
+.event-card[data-event="monaco"] {
+    background-image: url('/assets/monaco.jpg');
+}
+
+.event-card[data-event="spagna"] {
+    background-image: url('/assets/spagna.jpg');
+}
+
+.event-card[data-event="canada"] {
+    background-image: url('/assets/canada.jpg');
+}
+
+.event-card[data-event="austria"] {
+    background-image: url('/assets/austria.jpg');
+}
+
+.event-card[data-event="gran-bretagna"] {
+    background-image: url('/assets/gran-bretagna.jpg');
+}
+
+.event-card[data-event="belgio"] {
+    background-image: url('/assets/belgio.jpg');
+}
+
+.event-card[data-event="ungheria"] {
+    background-image: url('/assets/ungheria.jpg');
+}
+
+.event-card[data-event="olanda"] {
+    background-image: url('/assets/olanda.jpg');
+}
+
+.event-card[data-event="italia"] {
+    background-image: url('/assets/italia.jpg');
+}
+
+.event-card[data-event="azerbaijan"] {
+    background-image: url('/assets/azerbaijan.jpg');
+}
+
+.event-card[data-event="singapore"] {
+    background-image: url('/assets/singapore.jpg');
+}
+
+.event-card[data-event="usa"] {
+    background-image: url('/assets/usa.jpg');
+}
+
+.event-card[data-event="messico"] {
+    background-image: url('/assets/messico.jpg');
+}
+
+.event-card[data-event="brasile"] {
+    background-image: url('/assets/brasile.jpg');
+}
+
+.event-card[data-event="las-vegas"] {
+    background-image: url('/assets/las-vegas.jpg');
+}
+
+.event-card[data-event="qatar"] {
+    background-image: url('/assets/qatar.jpg');
+}
+
+.event-card[data-event="abudhabi"] {
+    background-image: url('/assets/abudhabi.jpg');
+}
+
+/* Sezione Statistiche Piloti */
+.statistiche-section {
+    background: #121212;
+    color: white;
+    padding: 80px 0;
+}
+
+/* Titolo non scrollabile */
+.statistiche-section h2 {
+    text-align: center; 
+    margin-bottom: 40px; /* Distanza tra il titolo e le card */
+}
+
+/* Contenitore che abilita lo scorrimento orizzontale senza la barra */
+.container {
+    overflow-x: auto; /* Abilita lo scorrimento orizzontale */
+    padding-bottom: 20px;
+    width: 100%;
+    scroll-behavior: smooth; /* Rende lo scorrimento più fluido */
+}
+
+/* Layout orizzontale delle card */
+.row {
+    display: flex;
+    gap: 20px; /* Spaziatura tra le card */
+    flex-wrap: nowrap; /* Le card non andranno su più righe */
+}
+
+.col-md-4 {
+    flex: 0 0 auto; /* Non ridimensionare la larghezza */
+    width: 300px; /* Imposta una larghezza fissa per ogni card */
+}
+
+/* Layout card piloti */
+.pilot-card {
+    background: #1c1c1c;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pilot-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+}
+
+/* Contenitore dell'immagine con overlay */
+.pilot-img {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Mantiene il rapporto 16:9 */
+}
+
+.pilot-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pilot-card:hover .pilot-img img {
+    transform: scale(1.1);
+}
+
+/* Informazioni pilota */
+.pilot-info {
+    padding: 20px;
+}
+
+.pilot-info h5 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pilot-info p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.btn-pilot:hover {
+    background: #ff1e1e;
+    transform: scale(1.1);
+}
+
+/* Titolo centrato */
+.container.text-center h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Sezione Storia della F1 */
+.storia-section {
+    color: white;
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.storia-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.storia-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p.lead {
+    font-size: 1.3rem;
+    font-weight: 300;
+    max-width: 900px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+.btn-storia {
+    background: #ff9800;
+    color: white;
+    padding: 16px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-storia:hover {
+    background: #e68900;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Call to Action */
+.cta-section {
+    background: linear-gradient(135deg, #e10600, #ff6a00);
+    color: white;
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-cta {
+    background: white;
+    color: #e10600;
+    padding: 16px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-cta:hover {
+    background: #fff0e6;
+    transform: scale(1.1);
+}
